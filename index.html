@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://www.gstatic.com/firebasejs/5.5.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.5.1/firebase-firestore.js"></script>
+	<title>Firebase Quickstart</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet"  href="styles.css">
+
+</head>
+<body>
+		<h1>Cloud Cafe</h1>
+		<div class="content">
+			<form id="add-cafe-form"></form>
+			<ul id="cafe-list"></ul>
+
+		</div>
+
+
+
+<script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+		    apiKey: "AIzaSyDmrNBKirkKpcnnFXDJuqqUcOl3nGbj-9c",
+		    authDomain: "new-webstart.firebaseapp.com",
+		    databaseURL: "https://new-webstart.firebaseio.com",
+		    projectId: "new-webstart",
+		    storageBucket: "new-webstart.appspot.com",
+		    messagingSenderId: "959623583683"
+		  };
+		  firebase.initializeApp(config);
+
+		  //creating a reference to our database
+		  const db = firebase.firestore();
+		  //set settings
+		  db.settings({ timestampsInSnapshots: true});
+		</script>
+
+
+		<script src="app.js"></script>
+
+</body>
+</html>
